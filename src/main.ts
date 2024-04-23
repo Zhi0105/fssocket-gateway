@@ -3,11 +3,11 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  if(process.env.API === 'DEV') {
+  if(process.env.ENV === 'DEV') {
     await app.listen(3001);
   }
 
-  if(process.env.API === 'PROD') {
+  if(process.env.ENV === 'PROD') {
     await app.listen(process.env.PORT);
   }
   
