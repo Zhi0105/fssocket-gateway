@@ -3,10 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install && npm run build
+        - npm install
     build:
       commands:
-        - npm run start:prod
+        - npm run build
   artifacts:
     baseDirectory: dist
     files:
